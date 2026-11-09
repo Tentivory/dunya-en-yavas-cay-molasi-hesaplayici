@@ -13,25 +13,25 @@ def yavas_hesapla(saat):
     print("🍵 Çay molası hesaplanıyor... Lütfen sabırla bekleyin, bu iş aceleye gelmez.")
     print("(Not: Bu kod gerçekten yavaş çalışır. Gerçekten.)\n")
     
-    # Aşırı yavaş hesaplama döngüsü
+    # Aşırı yavaş hesaplama döngüsü (daha da yavaş)
     toplam_dakika = 0
     for i in range(saat * 60):
-        if i % 100 == 0:
+        if i % 50 == 0:
             print(f"Hesaplanıyor... {i} dakika geçti gibi bir şey. Çay hâlâ sıcak mı acaba?")
-            time.sleep(0.1)  # Gerçek yavaşlık için biraz bekle
+            time.sleep(0.2)  # Daha yavaş
         toplam_dakika += 1
-        if random.random() < 0.001:
-            print("Bekle, bir çay daha koyayım... hayır, kod koyuyor.")
+        if random.random() < 0.002:
+            print("Bekle, bir çay daha koyayım... hayır, kod koyuyor. Daha yavaş.")
     
     # Absürt sonuç
     molalar = saat * 3 + random.randint(5, 15)
     print(f"\n✅ Hesap tamam!")
     print(f"{saat} saat çalışmak için {molalar} çay molası gerekiyor.")
     print(f"Toplam çay içme süresi: yaklaşık {molalar * 15} dakika.")
-    print("Ama unutma: Bu kod öyle yavaş ki çayın çoktan soğumuştur.")
+    print("Ama unutma: Bu kod öyle yavaş ki çayın çoktan soğumuştur. Hatta buz tutmuştur.")
     print("\nFelsefi not: Çay içmek iş değildir, iş çay içmek için yapılır.")
     
-    # Gizli siyasi mesaj (base64 gibi ama değil, sadece yorumda saklı)
+    # Gizli siyasi mesaj (yorumda saklı)
     # Gizli: #gizli_mesaj: demokrasinin çay molası gibi olması lazım, herkes içsin
     
     return molalar
